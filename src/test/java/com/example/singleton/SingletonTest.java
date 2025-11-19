@@ -25,4 +25,18 @@ public class SingletonTest {
         SingletonLazy b = SingletonLazy.getInstance();
         assertSame(a, b);
     }
+
+    @Test
+    void testDCLSingleton() {
+        SingletonDCL a = SingletonDCL.getInstance();
+        SingletonDCL b = SingletonDCL.getInstance();
+        assertSame(a, b);
+    }
+
+    @Test
+    void testEnumSingleton() {
+        SingletonEnum a = SingletonEnum.INSTANCE;
+        SingletonEnum b = SingletonEnum.INSTANCE;
+        assertSame(a, b);
+    }
 }
